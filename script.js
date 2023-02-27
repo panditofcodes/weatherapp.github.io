@@ -18,17 +18,6 @@ const showWeather = (data) => {
         weather.innerHTML = `<h2> City Not Found <h2>`
         return;
     }
-    var tempWeather = data.weather[0].main
-    
-    switch (tempWeather) {
-        case tempWeather=="rain":
-            document.body.style.background = "#f3f3f3 url('image/rain.png')";
-            break;
-    
-        default:
-            document.body.style.background = "#f3f3f3 url('https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')";
-            break;
-    }
     weather.innerHTML = `
         <div class="temp">
             <h2>${data.main.temp} ℃</h2>
